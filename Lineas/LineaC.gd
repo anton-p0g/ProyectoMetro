@@ -36,7 +36,4 @@ func _ready():
 	linea_c.agregar_estacion(general_san_martin)
 	linea_c.agregar_estacion(retiro)
 
-	linea_c.conectar_estaciones(moreno.ID, retiro.ID, 1)
-
-
 	
