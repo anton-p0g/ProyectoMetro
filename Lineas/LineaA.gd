@@ -10,6 +10,7 @@ func _ready():
     # Todas las distancias están en km
     # El array de horarios se corresponde al horario del subte cada día de la semana
     # Las frecuencias se corresponden con el horario de apertura del subte (ejemplo: si abre de 05:30 a 22:53 la frecuencia es de 4 min)
+    # En transbordos faltan los IDs de las estaciones, se completarán cuando sepa cuáles son esos IDs.
     var plaza_de_mayo = EstacionClass.new("Plaza de Mayo", "PM", [-58.3709684989674, -34.6088103091689], {"PE": 0.3}, {}, false, ["05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "06:00 - 23:27", "08:00 - 22:01"], {"05:30 - 22:53": 4, "06:00 - 23:27": 6, "08:00 - 22:01": 7}, 1)
     var peru = EstacionClass.new("Perú", "PE", [-58.3742677264304,-34.6085590738532], {"PM": 0.3, "PI": 0.4}, {"D": "(ID de Catedral)", "E": "(ID de Bolívar)"}, false, ["05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "06:00 - 23:27", "08:00 - 22:01"], {"05:30 - 22:53": 4, "06:00 - 23:27": 6, "08:00 - 22:01": 7}, 1)
     var piedras = EstacionClass.new("Piedras", "PI", [-58.3790851530908,-34.608881721215], {"PE": 0.4, "LI": 0.3}, {}, false, ["05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "06:00 - 23:27", "08:00 - 22:01"], {"05:30 - 22:53": 4, "06:00 - 23:27": 6, "08:00 - 22:01": 7}, 1)
