@@ -21,7 +21,7 @@ func _ready():
     var alberti = EstacionClass.new("Alberti", "AL", [-58.401207534233,-34.6098335784398], {"PA": 0.2}, {}, false, ["05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "05:30 - 22:53", "06:00 - 23:27", "08:00 - 22:01"], {"05:30 - 22:53": 4, "06:00 - 23:27": 6, "08:00 - 22:01": 7}, 1)
     
     # Creamos la línea A y asignamos el color
-    var Linea_a = LineaClass.new("Línea A", Color(0, 0.69, 0.87))
+    var Linea_a = LineaClass.new("A", Color(0, 0.69, 0.87))
     
     # Agregamos las estaciones a la línea A
     Linea_a.agregar_estacion(plaza_de_mayo)
