@@ -16,16 +16,16 @@ var horarios: Array
 var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minutos
 var puertas: int
 
-func _init(_nombre: String, _ID: String, _coordenadas: Array = [], _transbordos: Dictionary = {},
-           _adyacentes: Dictionary = {}, _ascensores: bool = false, _horarios: Array = [], _frecuencia: Dictionary = {}, 
-           _puertas: int = 0):
+func _init(p_nombre: String, p_ID: String, p_coordenadas: Array = [], p_transbordos: Dictionary = {},
+           p_adyacentes: Dictionary = {}, p_ascensores: bool = false, p_horarios: Array = [], p_frecuencia: Dictionary = {}, 
+           p_puertas: int = 0):
     
-    self.nombre = _nombre
-    self.ID = _ID
-    self.coordenadas = _coordenadas
-    self.transbordos = _transbordos
-    self.adyacentes = _adyacentes
-    self.ascensores = _ascensores
-    self.horarios = _horarios
-    self.frecuencia = _frecuencia
-    self.puertas = _puertas
+    self.nombre = p_nombre
+    self.ID = p_ID
+    self.coordenadas = p_coordenadas
+    self.transbordos = p_transbordos
+    self.adyacentes = p_adyacentes
+    self.ascensores = p_ascensores
+    self.horarios = p_horarios
+    self.frecuencia = p_frecuencia
+    self.puertas = p_puertas
