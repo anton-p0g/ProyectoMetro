@@ -4,7 +4,7 @@ extends Node
 
 # Defino la clase Linea que usaremos para construir las lineas de metro
 
-class_name Linea
+class_name LineaClass
 
 # Importamos la clase Estacion
 
