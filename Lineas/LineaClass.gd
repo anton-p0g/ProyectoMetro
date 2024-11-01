@@ -13,13 +13,15 @@ const Estacion = preload("res://Lineas//EstacionClass.gd")  # Asegurate de que e
 var nombre: String
 var color: Color
 var estaciones: Array
-var horarios: Dictionary
+var horarios: Dictionary # Clave = Día semana Valor = Hora
+var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minutos
 
 # Constructor de la clase
-func _init(p_nombre: String, p_color: Color, p_horarios: Dictionary, p_estaciones: Array = []):
+func _init(p_nombre: String, p_color: Color, p_horarios: Dictionary, p_frecuencia: Dictionary, p_estaciones: Array = []):
     self.nombre = p_nombre
     self.color = p_color
     self.horarios = p_horarios
+    self.frecuencia = p_frecuencia
     self.estaciones = p_estaciones
 
 
