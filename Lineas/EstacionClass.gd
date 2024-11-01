@@ -13,6 +13,7 @@ var transbordos: Dictionary # Clave = Linea a la que conecta: Valor = ID de la e
 var adyacentes: Dictionary # Clave = ID de estacion a la que conecta: Valor = distancia
 var ascensores: bool
 var escaleras: int
+#a
 
 func _init(p_nombre: String, p_ID: String, p_coordenadas: Array = [], p_transbordos: Dictionary = {},
            p_adyacentes: Dictionary = {}, p_ascensores: bool = false, p_escaleras: int = 0):
