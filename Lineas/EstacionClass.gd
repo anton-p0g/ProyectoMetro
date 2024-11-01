@@ -9,8 +9,8 @@ class_name EstacionClass
 var nombre: String
 var ID: String 
 var coordenadas: Array  # Primera posicion lat, segunda long
-var adyacentes: Dictionary # Clave = ID de estacion a la que conecta: Valor = distancia
 var transbordos: Dictionary # Clave = Linea a la que conecta: Valor = ID de la estacion a la que conecta
+var adyacentes: Dictionary # Clave = ID de estacion a la que conecta: Valor = distancia
 var ascensores: bool
 var horarios: Array
 var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minutos
