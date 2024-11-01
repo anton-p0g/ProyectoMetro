@@ -8,17 +8,17 @@ class_name Linea
 
 # Importamos la clase Estacion
 
-const Estacion = preload("res://Estacion.gd")  # Asegurate de que esta ruta sea correcta
+const Estacion = preload("res://Lineas//EstacionClass.gd")  # Asegurate de que esta ruta sea correcta
 
 var nombre: String
 var color: Color
 var estaciones: Array
 
 # Constructor de la clase
-func _init(nombre: String, color: Color, estaciones: Array = []):
-    self.nombre = nombre
-    self.color = color
-    self.estaciones = estaciones
+func _init(_nombre: String, _color: Color, _estaciones: Array = []):
+    self.nombre = _nombre
+    self.color = _color
+    self.estaciones = _estaciones
 
 
 # Metodo para agregar una estacion a la linea

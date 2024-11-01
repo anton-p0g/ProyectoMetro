@@ -4,7 +4,7 @@ extends Node
 
 # Defino la clase Estacion que usaremos para la clase Lineas
 
-class_name Estacion
+class_name EstacionClass
 
 var nombre: String
 var ID: String 
@@ -16,16 +16,16 @@ var horarios: Array
 var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minutos
 var puertas: int
 
-func _init(nombre: String, ID: String, coordenadas: Array = [], transbordos: Dictionary = {},
-           adyacentes: Dictionary = {}, ascensores: bool = false, horarios: Array = [], frecuencia: Dictionary = {}, 
-           puertas: int = 0):
+func _init(_nombre: String, _ID: String, _coordenadas: Array = [], _transbordos: Dictionary = {},
+           _adyacentes: Dictionary = {}, _ascensores: bool = false, _horarios: Array = [], _frecuencia: Dictionary = {}, 
+           _puertas: int = 0):
     
-    self.nombre = nombre
-    self.ID = ID
-    self.coordenadas = coordenadas
-    self.transbordos = transbordos
-    self.adyacentes = adyacentes
-    self.ascensores = ascensores
-    self.horarios = horarios
-    self.frecuencia = frecuencia
-    self.puertas = puertas
+    self.nombre = _nombre
+    self.ID = _ID
+    self.coordenadas = _coordenadas
+    self.transbordos = _transbordos
+    self.adyacentes = _adyacentes
+    self.ascensores = _ascensores
+    self.horarios = _horarios
+    self.frecuencia = _frecuencia
+    self.puertas = _puertas
