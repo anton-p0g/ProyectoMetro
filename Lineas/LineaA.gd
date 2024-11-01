@@ -7,7 +7,7 @@ const LineaClass = preload("res://LineaClass.gd")
 
 func _ready():
     # Creamos las estaciones de la Línea A
-    # Todas las distancias están en km
+    # Todas las distancias están en minutos
     # El array de horarios se corresponde al horario del subte cada día de la semana
     # Las frecuencias se corresponden con el horario de apertura del subte (ejemplo: si abre de 05:30 a 22:53 la frecuencia es de 4 min)
     # En transbordos faltan los IDs de las estaciones, se completarán cuando sepa cuáles son esos IDs.
