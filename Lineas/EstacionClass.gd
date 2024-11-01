@@ -12,7 +12,7 @@ var coordenadas: Array  # Primera posicion lat, segunda long
 var transbordos: Dictionary # Clave = Linea a la que conecta: Valor = ID de la estacion a la que conecta
 var adyacentes: Dictionary # Clave = ID de estacion a la que conecta: Valor = distancia
 var ascensores: bool
-var horarios: Array
+#var horarios: Array
 var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minutos
 var puertas: int
 
@@ -26,6 +26,6 @@ func _init(p_nombre: String, p_ID: String, p_coordenadas: Array = [], p_transbor
     self.transbordos = p_transbordos
     self.adyacentes = p_adyacentes
     self.ascensores = p_ascensores
-    self.horarios = p_horarios
+    #self.horarios = p_horarios
     self.frecuencia = p_frecuencia
     self.puertas = p_puertas
