@@ -17,7 +17,7 @@ var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minu
 var puertas: int
 
 func _init(p_nombre: String, p_ID: String, p_coordenadas: Array = [], p_transbordos: Dictionary = {},
-           p_adyacentes: Dictionary = {}, p_ascensores: bool = false, p_horarios: Array = [], p_frecuencia: Dictionary = {}, 
+           p_adyacentes: Dictionary = {}, p_ascensores: bool = false, p_frecuencia: Dictionary = {}, 
            p_puertas: int = 0):
     
     self.nombre = p_nombre
