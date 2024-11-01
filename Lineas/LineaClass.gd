@@ -15,10 +15,10 @@ var color: Color
 var estaciones: Array
 
 # Constructor de la clase
-func _init(_nombre: String, _color: Color, _estaciones: Array = []):
-    self.nombre = _nombre
-    self.color = _color
-    self.estaciones = _estaciones
+func _init(p_nombre: String, p_color: Color, p_estaciones: Array = []):
+    self.nombre = p_nombre
+    self.color = p_color
+    self.estaciones = p_estaciones
 
 
 # Metodo para agregar una estacion a la linea
