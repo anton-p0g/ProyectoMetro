@@ -13,7 +13,7 @@ const Estacion = preload("res://Lineas//EstacionClass.gd")  # Asegurate de que e
 var nombre: String
 var color: Color
 var estaciones: Dictionary
-var horarios: Dictionary # Clave = Día semana Valor = Hora
+var horarios: Dictionary # Clave = Dia semana Valor = Hora
 var frecuencia: Dictionary # Clave = franja horaria : Valor = frecuencia en minutos
 
 # Constructor de la clase
