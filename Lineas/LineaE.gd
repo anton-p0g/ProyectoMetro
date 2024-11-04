@@ -11,12 +11,12 @@ const Estacion = preload("res://Lineas/EstacionClass.gd")
 
 
 func _ready():
-    var pichincha = Estacion.new("Pichincha", 49, [-34.62310987, -58.39706807], {}, {48: 1.6}, false, 2)
-    var entre_rios = Estacion.new("Entre Rios", 48, [-34.62271967, -58.3915116999715], {}, {49: 1.6, 47: 1.33333}, false, 2)
-    var san_jose = Estacion.new("San Jose", 47, [-34.62233949, -58.38514855], {}, {48: 1.33333, 46: 1.86667}, false, 2)
-    var independencia = Estacion.new("Independencia", 46, [-34.61793739, -58.38153494], {"C": 18}, {47: 1.86667, 45: 1.86667} false, 3)
-    var belgrano = Estacion.new("Belgrano", 45, [-34.61284911, -58.37758089], {}, {46: 1.86667, 44: 1.6}, false, 3)
-    var bolivar = Estacion.new("Bolivar", 44, [-34.60924243, -58.37368422], {"D": 69}, {45: 1.6}, false, 5)
+    var pichincha = Estacion.new("Pichincha", 51, [-34.62310987, -58.39706807], {}, {52: 1.6}, false, 2)
+    var entre_rios = Estacion.new("Entre Rios", 52, [-34.62271967, -58.3915116999715], {}, {51: 1.6, 53: 1.33333}, false, 2)
+    var san_jose = Estacion.new("San Jose", 53, [-34.62233949, -58.38514855], {}, {52: 1.33333, 54: 1.86667}, false, 2)
+    var independencia = Estacion.new("Independencia", 54, [-34.61793739, -58.38153494], {"C": 18}, {53: 1.86667, 55: 1.86667} false, 3)
+    var belgrano = Estacion.new("Belgrano", 55, [-34.61284911, -58.37758089], {}, {54: 1.86667, 56: 1.6}, false, 3)
+    var bolivar = Estacion.new("Bolivar", 56, [-34.60924243, -58.37368422], {"D": 69}, {55: 1.6}, false, 5)
 
 
     var horario = {"Lunes": "5:30 - 22:50" , "Martes": "5:30 - 22:50" , "Miercoles": "5:30 - 22:50", "Jueves": "5:30 - 22:50",
@@ -31,3 +31,11 @@ func _ready():
     linea_e.agregar_estacion(independencia)
     linea_e.agregar_estacion(belgrano)
     linea_e.agregar_estacion(bolivar)
+
+    
+    # Conectamos las estaciones
+    linea_e.agregar_estacion(51, 52, linea_e.obtener_estacion_ID(51).adyacentes[52])
+    linea_e.agregar_estacion(52, 53, linea_e.obtener_estacion_ID(52).adyacentes[53])
+    linea_e.agregar_estacion(53, 54, linea_b.obtener_estacion_ID(53).adyacentes[54])
+    linea_e.agregar_estacion(54, 55, linea_e.obtener_estacion_ID(54).adyacentes[55])
+    linea_e.agregar_estacion(55, 56, linea_e.obtener_estacion_ID(55).adyacentes[56])
