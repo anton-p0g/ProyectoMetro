@@ -34,8 +34,8 @@ func _ready():
 
     
     # Conectamos las estaciones
-    linea_e.agregar_estacion(51, 52, linea_e.obtener_estacion_ID(51).adyacentes[52])
-    linea_e.agregar_estacion(52, 53, linea_e.obtener_estacion_ID(52).adyacentes[53])
-    linea_e.agregar_estacion(53, 54, linea_b.obtener_estacion_ID(53).adyacentes[54])
-    linea_e.agregar_estacion(54, 55, linea_e.obtener_estacion_ID(54).adyacentes[55])
-    linea_e.agregar_estacion(55, 56, linea_e.obtener_estacion_ID(55).adyacentes[56])
+    linea_e.agregar_estacion(51, 52, 1.6)
+    linea_e.agregar_estacion(52, 53, 1.33333)
+    linea_e.agregar_estacion(53, 54, 1.86667)
+    linea_e.agregar_estacion(54, 55, 1.8667)
+    linea_e.agregar_estacion(55, 56, 1.6)
