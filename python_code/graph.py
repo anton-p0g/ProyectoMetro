@@ -13,6 +13,11 @@ dict_estaciones_A = {11: {"name": "San Pedrito", "coordenadas": (-34.60881030916
 dict_estaciones_B = {}
 dict_estaciones_C = {}
 dict_estaciones_D = {}
-dict_estaciones_E = {}
+dict_estaciones_E = {51: {"name": "Pichincha", "coordenadas": (-34.62310987, -58.39706807)}
+                     52: {"name": "Entre Ríos", "coordenadas": (-34.62271967, -58.3915116999715)},
+                     53: {"name": "San José", "coordenadas": (-34.62233949, -58.38514855)},
+                     54: {"name": "Independencia", "coordenadas": (-34.61793739, -58.38153494)},
+                     55: {"name": "Belgrano", "coordenadas": (-34.61284911, -58.37758089)},
+                     56: {"name": "Bolívar", "coordenadas": (-34.60924243, -58.37368422)}}
 
 
