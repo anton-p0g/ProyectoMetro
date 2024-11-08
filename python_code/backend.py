@@ -98,6 +98,7 @@ def add_metro_network(graph) -> None:
     graph.add_edge(dict_estaciones[12]["id"], dict_estaciones[45]["id"], weight=5)
     graph.add_edge(dict_estaciones[12]["id"], dict_estaciones[56]["id"], weight=5)
     graph.add_edge(dict_estaciones[33]["id"], dict_estaciones[54]["id"], weight=5)
+    graph.add_edge(dict_estaciones[45]["id"], dict_estaciones[56]["id"], weight=5)
 
 def show_metro_network(graph) -> None:
     plt.figure(figsize=(10, 8))
