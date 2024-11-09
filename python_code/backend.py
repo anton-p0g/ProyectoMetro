@@ -4,41 +4,49 @@ from math import radians, sin, cos, sqrt, atan2
 
 
 dict_estaciones = {
-                   11: {"name": "Plaza de Mayo", "coordenadas": (-34.6088103091689, -58.3709684989674), "tiempo": 1},
-                   12: {"name": "Perú", "coordenadas": (-34.6085590738532, -58.3742677264304), "tiempo": 1},
-                   13: {"name": "Piedras", "coordenadas": (-34.608881721215, -58.3790851530908), "tiempo": 2},
-                   14: {"name": "Lima", "coordenadas": (-34.6090998065519, -58.3822324010181), "tiempo": 1},
-                   15: {"name": "Saenz Peña", "coordenadas": (-34.6094125865027, -58.3867771940873), "tiempo": 1},
-                   16: {"name": "Congreso", "coordenadas": (-34.6092256843174, -58.3926688246648), "tiempo": 1},
-                   17: {"name": "Pasco", "coordenadas": (-34.6096459617052, -58.3984269918123), "tiempo": 1},
-                   18: {"name": "Alberti", "coordenadas": (-34.6098335784398, -58.401207534233), "tiempo": 0},
-                   21: {"name": "Leandro N. Alem", "coordenadas": (-34.6029894966332, -58.369929850122300), "tiempo": 1},
-                   22: {"name": "Florida", "coordenadas": (-34.603297285577500, -58.375071518263500), "tiempo": 1},
-                   23: {"name": "Carlos Pellegrini", "coordenadas": (-34.6036371051817, -58.380714847140800), "tiempo": 1},
-                   24: {"name": "Uruguay", "coordenadas": (-34.6040935531057, -58.387296133540700), "tiempo": 2},
-                   25: {"name": "CallaoB", "coordenadas": (-34.604419542860700, -58.392314235088700), "tiempo": 1},
-                   26: {"name": "Pasteur", "coordenadas": (-34.604642967919300, -58.399474256679), "tiempo": 0},
-                   31: {"name": "Constitución", "coordenadas": (-34.6276194522548, -58.381434433934295), "tiempo": 1},
-                   32: {"name": "San Juan", "coordenadas": (-34.6219167322081, -58.3799211788651), "tiempo": 2},
-                   33: {"name": "IndependenciaC", "coordenadas": (-34.6181255992933, -58.380173610475204), "tiempo": 2},
-                   34: {"name": "Moreno", "coordenadas": (-34.6126172798037, -58.38044446966), "tiempo": 1},
-                   35: {"name": "Avenida de Mayo", "coordenadas": (-34.6089833148827, -58.3806107179579), "tiempo": 2},
-                   36: {"name": "Diagonal Norte", "coordenadas": (-34.604843739913996, -58.3795299800739), "tiempo": 1},
-                   37: {"name": "Lavalle", "coordenadas": (-34.601769923011396, -58.3781557828244), "tiempo": 2},
-                   38: {"name": "San Martín", "coordenadas": (-34.5950574047792, -58.3778190509867), "tiempo": 1},
-                   39: {"name": "Retiro", "coordenadas": (-34.5911938083332, -58.3740182164816), "tiempo": 0},
-                   41: {"name": "Facultad de Medicina", "coordenadas": (-34.5997570807639, -58.3979237555734), "tiempo": 1},
-                   42: {"name": "CallaoD", "coordenadas": (-34.604419542860700, -58.392314235088700), "tiempo": 2},
-                   43: {"name": "Tribunales", "coordenadas": (-34.6015871651394, -58.385142358801200), "tiempo": 1},
-                   44: {"name": "9 de Julio", "coordenadas": (-34.6042452029629, -58.3805743428896), "tiempo": 2},
-                   45: {"name": "Catedral", "coordenadas": (-34.6078023364289, -58.3739558069511), "tiempo": 0},
-                   51: {"name": "Pichincha", "coordenadas": (-34.62310987, -58.39706807), "tiempo": 1},
-                   52: {"name": "Entre Ríos", "coordenadas": (-34.62271967, -58.3915116999715), "tiempo": 2},
-                   53: {"name": "San José", "coordenadas": (-34.62233949, -58.38514855), "tiempo": 1},
-                   54: {"name": "IndependenciaE", "coordenadas": (-34.61793739, -58.38153494), "tiempo": 2},
-                   55: {"name": "Belgrano", "coordenadas": (-34.61284911, -58.37758089), "tiempo": 1},
-                   56: {"name": "Bolívar", "coordenadas": (-34.60924243, -58.37368422), "tiempo": 0}
+                   11: {"name": "plaza de mayo", "coordenadas": (-34.6088103091689, -58.3709684989674), "tiempo": 1},
+                   12: {"name": "peru", "coordenadas": (-34.6085590738532, -58.3742677264304), "tiempo": 1},
+                   13: {"name": "piedras", "coordenadas": (-34.608881721215, -58.3790851530908), "tiempo": 2},
+                   14: {"name": "lima", "coordenadas": (-34.6090998065519, -58.3822324010181), "tiempo": 1},
+                   15: {"name": "saenz peña", "coordenadas": (-34.6094125865027, -58.3867771940873), "tiempo": 1},
+                   16: {"name": "congreso", "coordenadas": (-34.6092256843174, -58.3926688246648), "tiempo": 1},
+                   17: {"name": "pasco", "coordenadas": (-34.6096459617052, -58.3984269918123), "tiempo": 1},
+                   18: {"name": "alberti", "coordenadas": (-34.6098335784398, -58.401207534233), "tiempo": 0},
+                   21: {"name": "leandro n. alem", "coordenadas": (-34.6029894966332, -58.369929850122300), "tiempo": 1},
+                   22: {"name": "florida", "coordenadas": (-34.603297285577500, -58.375071518263500), "tiempo": 1},
+                   23: {"name": "carlos pellegrini", "coordenadas": (-34.6036371051817, -58.380714847140800), "tiempo": 1},
+                   24: {"name": "uruguay", "coordenadas": (-34.6040935531057, -58.387296133540700), "tiempo": 2},
+                   25: {"name": "callaob", "coordenadas": (-34.604419542860700, -58.392314235088700), "tiempo": 1},
+                   26: {"name": "pasteur", "coordenadas": (-34.604642967919300, -58.399474256679), "tiempo": 0},
+                   31: {"name": "constitucion", "coordenadas": (-34.6276194522548, -58.381434433934295), "tiempo": 1},
+                   32: {"name": "san juan", "coordenadas": (-34.6219167322081, -58.3799211788651), "tiempo": 2},
+                   33: {"name": "independenciac", "coordenadas": (-34.6181255992933, -58.380173610475204), "tiempo": 2},
+                   34: {"name": "moreno", "coordenadas": (-34.6126172798037, -58.38044446966), "tiempo": 1},
+                   35: {"name": "avenida de mayo", "coordenadas": (-34.6089833148827, -58.3806107179579), "tiempo": 2},
+                   36: {"name": "diagonal norte", "coordenadas": (-34.604843739913996, -58.3795299800739), "tiempo": 1},
+                   37: {"name": "lavalle", "coordenadas": (-34.601769923011396, -58.3781557828244), "tiempo": 2},
+                   38: {"name": "san martin", "coordenadas": (-34.5950574047792, -58.3778190509867), "tiempo": 1},
+                   39: {"name": "retiro", "coordenadas": (-34.5911938083332, -58.3740182164816), "tiempo": 0},
+                   41: {"name": "facultad de medicina", "coordenadas": (-34.5997570807639, -58.3979237555734), "tiempo": 1},
+                   42: {"name": "callaod", "coordenadas": (-34.604419542860700, -58.392314235088700), "tiempo": 2},
+                   43: {"name": "tribunales", "coordenadas": (-34.6015871651394, -58.385142358801200), "tiempo": 1},
+                   44: {"name": "9 de julio", "coordenadas": (-34.6042452029629, -58.3805743428896), "tiempo": 2},
+                   45: {"name": "catedral", "coordenadas": (-34.6078023364289, -58.3739558069511), "tiempo": 0},
+                   51: {"name": "pichincha", "coordenadas": (-34.62310987, -58.39706807), "tiempo": 1},
+                   52: {"name": "entre rios", "coordenadas": (-34.62271967, -58.3915116999715), "tiempo": 2},
+                   53: {"name": "san jose", "coordenadas": (-34.62233949, -58.38514855), "tiempo": 1},
+                   54: {"name": "endependenciae", "coordenadas": (-34.61793739, -58.38153494), "tiempo": 2},
+                   55: {"name": "belgrano", "coordenadas": (-34.61284911, -58.37758089), "tiempo": 1},
+                   56: {"name": "bolivar", "coordenadas": (-34.60924243, -58.37368422), "tiempo": 0}
     }
+
+dict_tildes = {
+    "á": "a",
+    "é": "e",
+    "í": "i",
+    "ó": "o",
+    "ú": "u"
+}
 
 def add_metro_network(graph):
     lineas_metro_ids = [
@@ -62,12 +70,22 @@ def add_metro_network(graph):
     graph.add_edge(33, 54, weight=5)
     graph.add_edge(45, 56, weight=5)
 
+def conversion_strings(station_name) -> str:
+    lower_case = station_name.lower()
+    for i in range(len(lower_case)):
+        if lower_case[i] in dict_tildes:
+            lower_case[i] = dict_tildes[lower_case[i]]
+    return lower_case
 
-def find_station_id_by_name(station_name):
-    for station_id, station_info in dict_estaciones.items():
-        if station_info["name"] == station_name:
-            return station_id
-    raise ValueError(f"Estación '{station_name}' no encontrada en el diccionario.")
+
+def find_station_id_by_name(station_name: str):
+    try: 
+        station_name = conversion_strings(station_name)
+        for station_id, station_info in dict_estaciones.items():
+            if station_info["name"] == station_name:
+                return station_id
+    except:
+        raise ValueError(f"Estación '{station_name}' no encontrada en el diccionario.")
 
 
 def show_metro_network(graph) -> None:
@@ -115,22 +133,34 @@ def heuristic_metro_stations(current, destination, velocidad_media = 0.833333333
 
     return tiempo_haversine(coords_current[0], coords_current[1], coords_destination[0], coords_destination[1])
 
-
-def main():
-
+def path_time(current_station, final_station):
     metro = nx.Graph()
     add_metro_network(metro)
+    path = create_path(metro, current_station, final_station)
+    time = calculate_time(metro, current_station, final_station)
+    return path, time
+
+
+def create_path(graph, current_station, final_station):
+    path_ids = nx.astar_path(graph, current_station, final_station, heuristic_metro_stations, weight="weight")
+    path_nombres = []
+    for elem in path_ids:
+        path_nombres.append(dict_estaciones[elem]["name"])
+    return path_nombres
+
+
+def calculate_time(graph, current_station, final_station):
+    tiempo_path = nx.astar_path_length(graph, current_station, final_station, heuristic_metro_stations)
+    return tiempo_path
+
+
+def main():
     source = input("Ingrese la estación de partida: ")
     source_id = find_station_id_by_name(source)
     target = input("Ingrese la estación de destino: ")
     target_id = find_station_id_by_name(target)
 
-    path_ids = nx.astar_path(metro, source_id, target_id, heuristic_metro_stations, weight="weight")
-    tiempo_path = nx.astar_path_length(metro, source_id, target_id, heuristic_metro_stations)
-
-    path_nombres = []
-    for elem in path_ids:
-        path_nombres.append(dict_estaciones[elem]["name"])
+    path_nombres, tiempo_path = path_time(source_id, target_id)
     print(path_nombres)
     print(f"Tiempo estimado: {tiempo_path} minutos.")
     
