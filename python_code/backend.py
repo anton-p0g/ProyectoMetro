@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from math import radians, sin, cos, sqrt, atan2
-
+import json
 
 dict_estaciones = {
                    11: {"name": "Plaza de Mayo", "coordenadas": (-34.6088103091689, -58.3709684989674), "tiempo": 1},
@@ -134,6 +134,13 @@ def main():
     print(path_nombres)
     print(f"Tiempo estimado: {tiempo_path} minutos.")
     
+    output = {
+        "path": path_ids,
+        "Time": tiempo_path
+    }
+
+    with open("path_output.json", "w") as file:
+        json.dump(output, file)
 
 if __name__ == "__main__":
     main()
