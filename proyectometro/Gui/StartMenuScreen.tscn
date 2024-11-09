@@ -1,10 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://boxxmumjmhxmd"]
+[gd_scene load_steps=17 format=3 uid="uid://boxxmumjmhxmd"]
 
 [ext_resource type="Script" path="res://Scripts/Gui/start_menu.gd" id="1_5erdi"]
+[ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="2_exbkt"]
 [ext_resource type="FontFile" uid="uid://blaeh4sddcps" path="res://Fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf" id="2_md0fl"]
 [ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Sprites/Subte-logo.svg" id="3_0p2c1"]
+[ext_resource type="FontFile" uid="uid://b0emhowcce23p" path="res://Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf" id="3_38ksi"]
+[ext_resource type="Texture2D" uid="uid://cnnw1tgr5p1rl" path="res://Sprites/Buttons/button_rectangle.png" id="4_qy7is"]
+[ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Sprites/Buttons/button_rectangle_depth.png" id="5_dx0h8"]
+[ext_resource type="Texture2D" uid="uid://cy52fy0vy8rpr" path="res://Sprites/Buttons/panel_rectangle_screws.png" id="5_nwu68"]
 
-[node name="StartScreen" type="Control"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pco52"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m812a"]
+texture = ExtResource("4_qy7is")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0lwiy"]
+texture = ExtResource("5_nwu68")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_36ywc"]
+texture = ExtResource("5_dx0h8")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apatq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15yyw"]
+texture = ExtResource("4_qy7is")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_usyjg"]
+texture = ExtResource("5_dx0h8")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2orjj"]
+
+[node name="Root" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +43,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5erdi")
 
+[node name="CustomCursor" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_exbkt")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -26,49 +58,96 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.299211, 0.388755, 0.536115, 1)
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.759
-anchor_right = 0.5
-anchor_bottom = 0.759
-offset_left = -112.0
-offset_top = -11.332
-offset_right = 112.0
-offset_bottom = 11.668
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_md0fl")
-text = "< Press any key to continue >"
-
 [node name="Menu" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -51.0
-offset_right = 60.0
-offset_bottom = 47.0
+offset_left = -119.0
+offset_top = -100.5
+offset_right = 119.0
+offset_bottom = 100.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 12
 
 [node name="Start" type="Button" parent="Menu"]
 layout_mode = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Menu/Start"]
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_38ksi")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pco52")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m812a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lwiy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_36ywc")
+text = "Start"
 
 [node name="Exit" type="Button" parent="Menu"]
 layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.270222, 0.270222, 0.270222, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_38ksi")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_apatq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_15yyw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_usyjg")
+text = "Exit"
 
-[node name="Subte_Logo" type="Sprite2D" parent="."]
-position = Vector2(575, 250)
-scale = Vector2(0.614537, 0.614537)
+[node name="StartScreen" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2orjj")
+
+[node name="Logo" type="TextureRect" parent="StartScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.378
+anchor_top = 0.282
+anchor_right = 0.622
+anchor_bottom = 0.718
+offset_left = -0.456024
+offset_top = 0.263992
+offset_right = 0.455933
+offset_bottom = -0.264038
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_0p2c1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="StartScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.382
+anchor_top = 0.897
+anchor_right = 0.618
+anchor_bottom = 0.938
+offset_left = -0.564026
+offset_top = -0.255981
+offset_right = 0.563965
+offset_bottom = 0.175964
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_md0fl")
+theme_override_font_sizes/font_size = 20
+text = "< Press any key to continue >"
 
 [connection signal="pressed" from="Menu/Exit" to="." method="_on_exit_pressed"]

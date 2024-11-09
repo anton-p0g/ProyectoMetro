@@ -12,14 +12,10 @@ func _input(event) -> void:
 
 func show_menu():
 	# Oculta el menú inicial
-	$Label.visible = false
-	$Subte_Logo.visible = false
-	
+	$StartScreen.visible = false
+
 	$Menu.visible = true
 	
-	#var animation = $Menu.create_animation()
-	#animation.interpolate_property($Menu, "rect_position:y", get_viewport_rect().size.y, get_viewport_rect().size.y - $Menu.rect_min_size.y, 0.5, Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	#animation.start()
 
 func _process(delta: float) -> void:
 	pass
