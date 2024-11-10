@@ -7,13 +7,14 @@ func _ready() -> void:
 
 
 func _input(event) -> void:
-	if (event is InputEventKey or event is InputEventMouseButton) and event.is_pressed() :
+	if (event is InputEventKey or event is InputEventMouseButton) and event.is_pressed() and $StartScreen.visible == true:
 		show_menu()
 
 func show_menu():
 	# Oculta el menú inicial
 	$StartScreen.visible = false
-
+	
+	$AnimationPlayer.play("startMenu")
 	$Menu.visible = true
 	
 
