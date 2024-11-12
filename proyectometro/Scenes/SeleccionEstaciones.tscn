@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpgfiekfgmmk5"]
+
+[ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
+[ext_resource type="Script" path="res://Scripts/Gui/estaciones_origen.gd" id="2_1nfwg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CustomCursor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_e8mij")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.299211, 0.388755, 0.536115, 1)
+
+[node name="Origen" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 212.0
+offset_right = 384.0
+offset_bottom = 342.0
+
+[node name="LabelEstacionOrigen" type="Label" parent="Origen"]
+layout_mode = 2
+text = "Seleccione la estación de origen:"
+
+[node name="EstacionesOrigen" type="OptionButton" parent="Origen"]
+layout_mode = 2
+
+[node name="Destino" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 298.0
+offset_right = 384.0
+offset_bottom = 428.0
+
+[node name="LabelEstacionDestino" type="Label" parent="Destino"]
+layout_mode = 2
+text = "Seleccione la estación de destino:"
+
+[node name="EstacionesDestino" type="OptionButton" parent="Destino"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_1nfwg")
