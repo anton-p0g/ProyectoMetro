@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpgfiekfgmmk5"]
+[gd_scene load_steps=13 format=3 uid="uid://bpgfiekfgmmk5"]
 
+[ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
 [ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
 [ext_resource type="Script" path="res://Scripts/Gui/lista_estaciones.gd" id="2_1nfwg"]
 [ext_resource type="FontFile" uid="uid://b0emhowcce23p" path="res://Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf" id="3_kavc7"]
 [ext_resource type="Texture2D" uid="uid://cnnw1tgr5p1rl" path="res://Sprites/Buttons/button_rectangle.png" id="4_y3doi"]
 [ext_resource type="Texture2D" uid="uid://cy52fy0vy8rpr" path="res://Sprites/Buttons/panel_rectangle_screws.png" id="5_dkicf"]
 [ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Sprites/Buttons/button_rectangle_depth.png" id="6_55l7p"]
+[ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Sprites/Subte-logo.svg" id="8_bsq8l"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s5rr"]
 
@@ -25,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_31r6i")
 
 [node name="CustomCursor" type="Control" parent="."]
 layout_mode = 3
@@ -42,41 +45,41 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.299211, 0.388755, 0.536115, 1)
 
-[node name="Origen" type="VBoxContainer" parent="."]
+[node name="SeleccionarRuta" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 130.0
-offset_top = 212.0
-offset_right = 384.0
-offset_bottom = 342.0
+offset_left = 117.0
+offset_top = 177.0
+offset_right = 403.0
+offset_bottom = 280.0
+
+[node name="Origen" type="VBoxContainer" parent="SeleccionarRuta"]
+layout_mode = 2
 script = ExtResource("2_1nfwg")
 
-[node name="LabelEstacionOrigen" type="Label" parent="Origen"]
+[node name="LabelEstacionOrigen" type="Label" parent="SeleccionarRuta/Origen"]
 layout_mode = 2
 text = "Seleccione la estación de origen:"
 
-[node name="listaEstaciones" type="OptionButton" parent="Origen"]
+[node name="listaEstaciones" type="OptionButton" parent="SeleccionarRuta/Origen"]
 layout_mode = 2
 
-[node name="Destino" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 130.0
-offset_top = 298.0
-offset_right = 384.0
-offset_bottom = 428.0
+[node name="Destino" type="VBoxContainer" parent="SeleccionarRuta"]
+layout_mode = 2
 script = ExtResource("2_1nfwg")
 
-[node name="LabelEstacionDestino" type="Label" parent="Destino"]
+[node name="LabelEstacionDestino" type="Label" parent="SeleccionarRuta/Destino"]
 layout_mode = 2
 text = "Seleccione la estación de destino:"
 
-[node name="listaEstaciones" type="OptionButton" parent="Destino"]
+[node name="listaEstaciones" type="OptionButton" parent="SeleccionarRuta/Destino"]
 layout_mode = 2
 
 [node name="CalcularRuta" type="Button" parent="."]
-offset_left = 142.0
-offset_top = 405.0
-offset_right = 373.0
-offset_bottom = 463.0
+layout_mode = 2
+offset_left = 115.0
+offset_top = 332.0
+offset_right = 401.0
+offset_bottom = 379.0
 size_flags_vertical = 3
 mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
@@ -89,3 +92,19 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m1urt")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l3kuy")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5qosc")
 text = "Calcular ruta"
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.119
+anchor_top = 0.032
+anchor_right = 0.33
+anchor_bottom = 0.215
+offset_left = 50.912
+offset_top = -0.736
+offset_right = -60.16
+offset_bottom = 7.67999
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_bsq8l")
+expand_mode = 1
