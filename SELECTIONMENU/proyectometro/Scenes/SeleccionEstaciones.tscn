@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Sprites/Buttons/button_rectangle_depth.png" id="6_55l7p"]
 [ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Sprites/Subte-logo.svg" id="8_bsq8l"]
 [ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://assets/map.png" id="9_1t8yq"]
-[ext_resource type="PackedScene" path="res://mapa/estación.tscn" id="10_7uol4"]
+[ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://mapa/estación.tscn" id="10_7uol4"]
 [ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://assets/routes/lineaA.jpeg" id="11_26jix"]
 [ext_resource type="Texture2D" uid="uid://cq8nusa8ravxi" path="res://assets/routes/lineaB.png" id="12_0cb10"]
 [ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://assets/routes/lineaC.jpeg" id="13_uiy4y"]
