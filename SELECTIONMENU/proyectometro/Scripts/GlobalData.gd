@@ -1,4 +1,4 @@
-extends RefCounted
+extends Node
 
 var path = []
 var total_time = 0
