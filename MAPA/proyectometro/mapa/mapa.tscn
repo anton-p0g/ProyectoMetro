@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2xxymqlfv070"]
+[gd_scene load_steps=10 format=3 uid="uid://d2xxymqlfv070"]
 
 [ext_resource type="Texture2D" uid="uid://r4o88ixtpaub" path="res://assets/map.png" id="1_85bvt"]
 [ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://mapa/estación.tscn" id="2_ajnup"]
@@ -7,10 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://beuo5dygfqdi0" path="res://assets/routes/lineaB.png" id="4_j3why"]
 [ext_resource type="Texture2D" uid="uid://65rceub3dd17" path="res://assets/routes/lineaC.jpeg" id="5_k5vbb"]
 [ext_resource type="Texture2D" uid="uid://bhrv5w60ha11g" path="res://assets/routes/lineaE.jpeg" id="7_o0ksd"]
+[ext_resource type="Texture2D" uid="uid://cssrxl1k1y8lp" path="res://assets/routes/gris.jpg" id="8_k1wvw"]
+[ext_resource type="Texture2D" uid="uid://dfn0ooh40llfj" path="res://assets/routes/transbordo3.png" id="9_jater"]
 
 [node name="Mapa" type="Node2D"]
 
 [node name="Map" type="Sprite2D" parent="."]
+z_index = -2
 position = Vector2(547, 565)
 texture = ExtResource("1_85bvt")
 
@@ -192,67 +195,37 @@ texture = ExtResource("4_j3why")
 
 [node name="conexiones" type="Node2D" parent="lineaC"]
 
-[node name="LineaC2" type="Sprite2D" parent="lineaC/conexiones"]
-position = Vector2(806.347, 225.607)
-rotation = -1.18466
-scale = Vector2(0.883598, 1)
-texture = ExtResource("5_k5vbb")
+[node name="992" type="Node2D" parent="lineaC/conexiones"]
 
-[node name="LineaC" type="Sprite2D" parent="lineaC/conexiones"]
-position = Vector2(970.54, 35.7674)
-rotation = -0.702687
-scale = Vector2(0.890281, 1)
-texture = ExtResource("5_k5vbb")
-
-[node name="LineaC3" type="Sprite2D" parent="lineaC/conexiones"]
-position = Vector2(868.119, 120.532)
-rotation = -0.686951
-scale = Vector2(0.389858, 1)
-texture = ExtResource("5_k5vbb")
-
-[node name="LineaC4" type="Sprite2D" parent="lineaC/conexiones"]
-position = Vector2(719.49, 395.348)
-rotation = -0.204113
-scale = Vector2(0.241968, 1)
-texture = ExtResource("5_k5vbb")
-
-[node name="LineaC5" type="Sprite2D" parent="lineaC/conexiones"]
-position = Vector2(757.052, 347.368)
-rotation = -1.19002
-scale = Vector2(0.509598, 1)
-texture = ExtResource("5_k5vbb")
-
-[node name="1406" type="Node2D" parent="lineaC/conexiones"]
-
-[node name="14061" type="Sprite2D" parent="lineaC/conexiones/1406"]
+[node name="9921" type="Sprite2D" parent="lineaC/conexiones/992"]
 position = Vector2(281.006, 1118.82)
 rotation = -1.17839
 scale = Vector2(0.475881, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="14062" type="Sprite2D" parent="lineaC/conexiones/1406"]
+[node name="9922" type="Sprite2D" parent="lineaC/conexiones/992"]
 position = Vector2(378.679, 1024.89)
 rotation = -1.18249
 scale = Vector2(0.257384, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="14063" type="Sprite2D" parent="lineaC/conexiones/1406"]
+[node name="9923" type="Sprite2D" parent="lineaC/conexiones/992"]
 position = Vector2(334.247, 1061.35)
 rotation = -0.401434
 scale = Vector2(0.41495, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="1322" type="Node2D" parent="lineaC/conexiones"]
+[node name="1057" type="Node2D" parent="lineaC/conexiones"]
 
-[node name="13221" type="Sprite2D" parent="lineaC/conexiones/1322"]
+[node name="1057" type="Sprite2D" parent="lineaC/conexiones/1057"]
 position = Vector2(420, 923)
 rotation = -1.18603
 scale = Vector2(0.812649, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="1260" type="Node2D" parent="lineaC/conexiones"]
+[node name="1123" type="Node2D" parent="lineaC/conexiones"]
 
-[node name="12601" type="Sprite2D" parent="lineaC/conexiones/1260"]
+[node name="1123" type="Sprite2D" parent="lineaC/conexiones/1123"]
 position = Vector2(492, 747)
 rotation = -1.18607
 scale = Vector2(1.12824, 1)
@@ -266,27 +239,61 @@ rotation = -1.15775
 scale = Vector2(0.660692, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="1122" type="Node2D" parent="lineaC/conexiones"]
+[node name="1260" type="Node2D" parent="lineaC/conexiones"]
 
-[node name="11221" type="Sprite2D" parent="lineaC/conexiones/1122"]
+[node name="12601" type="Sprite2D" parent="lineaC/conexiones/1260"]
 position = Vector2(607.675, 463.819)
 rotation = -1.24537
 scale = Vector2(0.67357, 0.996878)
 texture = ExtResource("5_k5vbb")
 
-[node name="11222" type="Sprite2D" parent="lineaC/conexiones/1122"]
+[node name="12602" type="Sprite2D" parent="lineaC/conexiones/1260"]
 position = Vector2(680.513, 391.318)
 rotation = 0.364897
 scale = Vector2(0.249479, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="11223" type="Sprite2D" parent="lineaC/conexiones/1122"]
+[node name="12603" type="Sprite2D" parent="lineaC/conexiones/1260"]
 position = Vector2(645.062, 392.263)
 rotation = -0.516205
 scale = Vector2(0.210152, 1)
 texture = ExtResource("5_k5vbb")
 
-[node name="Node2D" type="Node2D" parent="lineaC/conexiones"]
+[node name="1332" type="Node2D" parent="lineaC/conexiones"]
+
+[node name="13321" type="Sprite2D" parent="lineaC/conexiones/1332"]
+position = Vector2(719.49, 395.348)
+rotation = -0.204113
+scale = Vector2(0.241968, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="13322" type="Sprite2D" parent="lineaC/conexiones/1332"]
+position = Vector2(757.052, 347.368)
+rotation = -1.19002
+scale = Vector2(0.509598, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="1406" type="Node2D" parent="lineaC/conexiones"]
+
+[node name="14061" type="Sprite2D" parent="lineaC/conexiones/1406"]
+position = Vector2(806.347, 225.607)
+rotation = -1.18466
+scale = Vector2(0.883598, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="14062" type="Sprite2D" parent="lineaC/conexiones/1406"]
+position = Vector2(868.119, 120.532)
+rotation = -0.686951
+scale = Vector2(0.389858, 1)
+texture = ExtResource("5_k5vbb")
+
+[node name="1482" type="Node2D" parent="lineaC/conexiones"]
+
+[node name="1482" type="Sprite2D" parent="lineaC/conexiones/1482"]
+position = Vector2(970.54, 35.7674)
+rotation = -0.702687
+scale = Vector2(0.890281, 1)
+texture = ExtResource("5_k5vbb")
 
 [node name="estaciones" type="Node2D" parent="lineaC"]
 
@@ -319,109 +326,127 @@ position = Vector2(534, 643)
 
 [node name="lineaD" type="Node2D" parent="."]
 
+[node name="estaciones" type="Node2D" parent="lineaD"]
+
+[node name="41" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+z_index = 1
+position = Vector2(239, -29)
+
+[node name="42" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+z_index = 1
+position = Vector2(402, 39)
+
+[node name="43" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(588, 220)
+
+[node name="44" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(671, 370)
+
+[node name="45" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
+position = Vector2(796, 563)
+
 [node name="conexiones" type="Node2D" parent="lineaD"]
 
-[node name="LineaD" type="Sprite2D" parent="lineaD/conexiones"]
+[node name="1722" type="Node2D" parent="lineaD/conexiones"]
+
+[node name="1722" type="Sprite2D" parent="lineaD/conexiones/1722"]
 position = Vector2(319.036, 4.98956)
 rotation = 0.395214
 scale = Vector2(0.755336, 1)
 texture = ExtResource("3_h7gsh")
 
-[node name="LineaD2" type="Sprite2D" parent="lineaD/conexiones"]
+[node name="1806" type="Node2D" parent="lineaD/conexiones"]
+
+[node name="18061" type="Sprite2D" parent="lineaD/conexiones/1806"]
 position = Vector2(483.202, 70.3808)
 rotation = 0.356083
 scale = Vector2(0.771607, 1)
 texture = ExtResource("3_h7gsh")
 
-[node name="LineaD3" type="Sprite2D" parent="lineaD/conexiones"]
+[node name="18062" type="Sprite2D" parent="lineaD/conexiones/1806"]
 position = Vector2(571.605, 155.38)
 rotation = 1.33182
 scale = Vector2(0.582963, 1)
 texture = ExtResource("3_h7gsh")
 
-[node name="LineaD4" type="Sprite2D" parent="lineaD/conexiones"]
-position = Vector2(642, 343)
-rotation = 0.746183
-scale = Vector2(0.37548, 1)
-texture = ExtResource("3_h7gsh")
+[node name="1892" type="Node2D" parent="lineaD/conexiones"]
 
-[node name="LineaD5" type="Sprite2D" parent="lineaD/conexiones"]
+[node name="18921" type="Sprite2D" parent="lineaD/conexiones/1892"]
 position = Vector2(601.617, 268.55)
 rotation = 1.31284
 scale = Vector2(0.497289, 1)
 texture = ExtResource("3_h7gsh")
 
-[node name="LineaD6" type="Sprite2D" parent="lineaD/conexiones"]
+[node name="18922" type="Sprite2D" parent="lineaD/conexiones/1892"]
+position = Vector2(642, 343)
+rotation = 0.746183
+scale = Vector2(0.37548, 1)
+texture = ExtResource("3_h7gsh")
+
+[node name="1980" type="Node2D" parent="lineaD/conexiones"]
+
+[node name="1980" type="Sprite2D" parent="lineaD/conexiones/1980"]
 position = Vector2(734, 469)
 rotation = 1.00377
 scale = Vector2(1.09383, 1)
 texture = ExtResource("3_h7gsh")
 
-[node name="estaciones" type="Node2D" parent="lineaD"]
-
-[node name="estación22" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
-z_index = 1
-position = Vector2(239, -29)
-
-[node name="estación21" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
-z_index = 1
-position = Vector2(402, 39)
-
-[node name="estación20" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
-position = Vector2(588, 220)
-
-[node name="estación19" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
-position = Vector2(671, 370)
-
-[node name="estación16" parent="lineaD/estaciones" instance=ExtResource("2_ajnup")]
-position = Vector2(796, 563)
-
 [node name="lineaE" type="Node2D" parent="."]
 
 [node name="conexiones" type="Node2D" parent="lineaE"]
 
-[node name="LineaE" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="2652" type="Node2D" parent="lineaE/conexiones"]
+
+[node name="2652" type="Sprite2D" parent="lineaE/conexiones/2652"]
 position = Vector2(-36.9386, 831.946)
 rotation = 0.354947
 scale = Vector2(0.885066, 1)
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE2" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="2756" type="Node2D" parent="lineaE/conexiones"]
+
+[node name="2756" type="Sprite2D" parent="lineaE/conexiones/2756"]
 position = Vector2(140, 898)
 rotation = 0.362667
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE3" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="2862" type="Node2D" parent="lineaE/conexiones"]
+
+[node name="28621" type="Sprite2D" parent="lineaE/conexiones/2862"]
 position = Vector2(254, 942)
 rotation = 0.394234
 scale = Vector2(0.24375, 1)
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE4" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="28622" type="Sprite2D" parent="lineaE/conexiones/2862"]
 position = Vector2(319.858, 943.963)
 rotation = -0.150047
 scale = Vector2(0.46934, 1)
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE5" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="28623" type="Sprite2D" parent="lineaE/conexiones/2862"]
 position = Vector2(386.966, 886.904)
 rotation = -1.11978
 scale = Vector2(0.593919, 1)
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE6" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="2970" type="Node2D" parent="lineaE/conexiones"]
+
+[node name="29701" type="Sprite2D" parent="lineaE/conexiones/2970"]
 position = Vector2(427.527, 797.837)
 rotation = -1.17114
 scale = Vector2(0.456294, 1)
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE7" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="29702" type="Sprite2D" parent="lineaE/conexiones/2970"]
 position = Vector2(524.36, 730.648)
 rotation = -0.338533
 scale = Vector2(0.8709, 1)
 texture = ExtResource("7_o0ksd")
 
-[node name="LineaE8" type="Sprite2D" parent="lineaE/conexiones"]
+[node name="3080" type="Node2D" parent="lineaE/conexiones"]
+
+[node name="3080" type="Sprite2D" parent="lineaE/conexiones/3080"]
 position = Vector2(688, 669)
 rotation = -0.380683
 scale = Vector2(0.898376, 1)
@@ -429,22 +454,48 @@ texture = ExtResource("7_o0ksd")
 
 [node name="estaciones" type="Node2D" parent="lineaE"]
 
-[node name="estación17" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+[node name="56" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
 position = Vector2(774, 633)
 
-[node name="estación23" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+[node name="55" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
 position = Vector2(606, 702)
 
-[node name="estación24" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+[node name="54" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
 position = Vector2(412, 835)
 
-[node name="estación27" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+[node name="53" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
 position = Vector2(233, 932)
 
-[node name="estación28" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+[node name="52" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
 position = Vector2(48, 862)
 
-[node name="estación29" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
+[node name="51" parent="lineaE/estaciones" instance=ExtResource("2_ajnup")]
 position = Vector2(-119, 802)
 
 [node name="transbordos" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="transbordos"]
+
+[node name="Node2D2" type="Node2D" parent="transbordos"]
+
+[node name="Node2D3" type="Node2D" parent="transbordos"]
+
+[node name="Node2D4" type="Node2D" parent="transbordos"]
+
+[node name="Node2D5" type="Node2D" parent="transbordos"]
+
+[node name="Node2D6" type="Node2D" parent="transbordos"]
+
+[node name="grises" type="Node2D" parent="."]
+
+[node name="Gris" type="Sprite2D" parent="."]
+position = Vector2(24, 297)
+rotation = 0.349066
+scale = Vector2(0.411245, 1)
+texture = ExtResource("8_k1wvw")
+
+[node name="Transbordo3" type="Sprite2D" parent="."]
+position = Vector2(685.613, 384.912)
+rotation = 0.785398
+scale = Vector2(0.176784, 0.129238)
+texture = ExtResource("9_jater")
