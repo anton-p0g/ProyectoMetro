@@ -61,8 +61,6 @@ func on_calcular_ruta_button_pressed():
 	var python_call = preload("res://Scripts/python_call.gd").new()
 	python_call.run_python_script(id_origen, id_destino)
 	
-	print(GlobalData.path_ids)
-	
 	
 func _on_button_pressed():
 	for node in target_nodes:
