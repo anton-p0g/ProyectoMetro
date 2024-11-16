@@ -1,0 +1,524 @@
+[gd_scene load_steps=20 format=3 uid="uid://bpgfiekfgmmk5"]
+
+[ext_resource type="Script" path="res://Scripts/Gui/mostrar_estaciones_origen_destino.gd" id="1_31r6i"]
+[ext_resource type="Script" path="res://Scripts/Gui/custom_cursor.gd" id="1_e8mij"]
+[ext_resource type="Script" path="res://Scripts/Gui/lista_estaciones.gd" id="2_1nfwg"]
+[ext_resource type="FontFile" uid="uid://b0emhowcce23p" path="res://Fonts/Roboto_Slab/static/RobotoSlab-ExtraBold.ttf" id="3_kavc7"]
+[ext_resource type="Texture2D" uid="uid://cnnw1tgr5p1rl" path="res://Sprites/Buttons/button_rectangle.png" id="4_y3doi"]
+[ext_resource type="Texture2D" uid="uid://cy52fy0vy8rpr" path="res://Sprites/Buttons/panel_rectangle_screws.png" id="5_dkicf"]
+[ext_resource type="Texture2D" uid="uid://cm4ag881lmh61" path="res://Sprites/Buttons/button_rectangle_depth.png" id="6_55l7p"]
+[ext_resource type="Texture2D" uid="uid://b4uboswskfatp" path="res://Sprites/Subte-logo.svg" id="8_bsq8l"]
+[ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://assets/map.png" id="9_1t8yq"]
+[ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://mapa/estación.tscn" id="10_7uol4"]
+[ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://assets/routes/lineaA.jpeg" id="11_26jix"]
+[ext_resource type="Texture2D" uid="uid://cq8nusa8ravxi" path="res://assets/routes/lineaB.png" id="12_0cb10"]
+[ext_resource type="Texture2D" uid="uid://yf5fwu8l6w3" path="res://assets/routes/lineaC.jpeg" id="13_uiy4y"]
+[ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://assets/routes/lineaD.jpeg" id="14_r8cj4"]
+[ext_resource type="Texture2D" uid="uid://bsr0w6ytalsbw" path="res://assets/routes/lineaE.jpeg" id="15_7scxj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s5rr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1urt"]
+texture = ExtResource("4_y3doi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l3kuy"]
+texture = ExtResource("5_dkicf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5qosc"]
+texture = ExtResource("6_55l7p")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_31r6i")
+
+[node name="CustomCursor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_e8mij")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.299211, 0.388755, 0.536115, 1)
+
+[node name="SeleccionarRuta" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 177.0
+offset_right = 373.0
+offset_bottom = 280.0
+
+[node name="Origen" type="VBoxContainer" parent="SeleccionarRuta"]
+layout_mode = 2
+script = ExtResource("2_1nfwg")
+
+[node name="LabelEstacionOrigen" type="Label" parent="SeleccionarRuta/Origen"]
+layout_mode = 2
+text = "Seleccione la estación de origen:"
+
+[node name="listaEstaciones" type="OptionButton" parent="SeleccionarRuta/Origen"]
+layout_mode = 2
+
+[node name="Destino" type="VBoxContainer" parent="SeleccionarRuta"]
+layout_mode = 2
+script = ExtResource("2_1nfwg")
+
+[node name="LabelEstacionDestino" type="Label" parent="SeleccionarRuta/Destino"]
+layout_mode = 2
+text = "Seleccione la estación de destino:"
+
+[node name="listaEstaciones" type="OptionButton" parent="SeleccionarRuta/Destino"]
+layout_mode = 2
+
+[node name="CalcularRuta" type="Button" parent="."]
+layout_mode = 2
+offset_left = 87.0
+offset_top = 332.0
+offset_right = 373.0
+offset_bottom = 379.0
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.270588, 0.270588, 0.270588, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kavc7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8s5rr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m1urt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l3kuy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5qosc")
+text = "Calcular ruta"
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.119
+anchor_top = 0.032
+anchor_right = 0.33
+anchor_bottom = 0.215
+offset_left = 22.912
+offset_top = -0.736
+offset_right = -88.16
+offset_bottom = 7.67999
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_bsq8l")
+expand_mode = 1
+
+[node name="Mapa" type="Node2D" parent="."]
+position = Vector2(550, 40)
+scale = Vector2(0.45, 0.5)
+
+[node name="Map" type="Sprite2D" parent="Mapa"]
+position = Vector2(547, 565)
+texture = ExtResource("9_1t8yq")
+
+[node name="lineaA" type="Node2D" parent="Mapa"]
+
+[node name="estaciones" type="Node2D" parent="Mapa/lineaA"]
+
+[node name="estación7" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(-17, 281)
+
+[node name="estación8" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(63, 310)
+
+[node name="estación9" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(233, 373)
+
+[node name="estación10" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(399, 457)
+
+[node name="estación11" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(530, 503)
+
+[node name="estación13" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(650, 548)
+
+[node name="estación14" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(769, 592)
+
+[node name="estación15" parent="Mapa/lineaA/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(858, 638)
+
+[node name="conexiones" type="Node2D" parent="Mapa/lineaA"]
+
+[node name="LineaA" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(23.1503, 295.546)
+rotation = 0.348251
+scale = Vector2(0.401822, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA2" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(148.196, 342.255)
+rotation = 0.344376
+scale = Vector2(0.818388, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA3" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(291.724, 394.837)
+rotation = 0.352052
+scale = Vector2(0.600247, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA4" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(362.875, 431.382)
+rotation = 0.903892
+scale = Vector2(0.19959, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA5" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(388, 452)
+rotation = 0.364711
+scale = Vector2(0.14894, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA6" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(464.628, 480.488)
+rotation = 0.33998
+scale = Vector2(0.658911, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA7" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(588, 525)
+rotation = 0.356886
+scale = Vector2(0.589957, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA8" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(709.501, 569.872)
+rotation = 0.355048
+scale = Vector2(0.578248, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA9" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(781.054, 596.346)
+rotation = 0.348243
+scale = Vector2(0.130087, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA10" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(802, 612)
+rotation = 0.890057
+scale = Vector2(0.153539, 1)
+texture = ExtResource("11_26jix")
+
+[node name="LineaA11" type="Sprite2D" parent="Mapa/lineaA/conexiones"]
+position = Vector2(836.847, 631.203)
+rotation = 0.311208
+scale = Vector2(0.26194, 1)
+texture = ExtResource("11_26jix")
+
+[node name="lineaB" type="Node2D" parent="Mapa"]
+
+[node name="estaciones" type="Node2D" parent="Mapa/lineaB"]
+
+[node name="estación2" parent="Mapa/lineaB/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(110, 119)
+
+[node name="estación" parent="Mapa/lineaB/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(323, 208)
+
+[node name="estación3" parent="Mapa/lineaB/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(494, 270)
+
+[node name="estación4" parent="Mapa/lineaB/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(649, 328)
+
+[node name="estación5" parent="Mapa/lineaB/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(860, 407)
+
+[node name="estación6" parent="Mapa/lineaB/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(1007, 463)
+
+[node name="conexiones" type="Node2D" parent="Mapa/lineaB"]
+
+[node name="LineaB" type="Sprite2D" parent="Mapa/lineaB/conexiones"]
+position = Vector2(215.362, 164.08)
+rotation = 0.396201
+scale = Vector2(1.22277, 1)
+texture = ExtResource("12_0cb10")
+
+[node name="LineaB2" type="Sprite2D" parent="Mapa/lineaB/conexiones"]
+position = Vector2(407.879, 239.857)
+rotation = 0.351186
+scale = Vector2(0.965381, 1)
+texture = ExtResource("12_0cb10")
+
+[node name="LineaB3" type="Sprite2D" parent="Mapa/lineaB/conexiones"]
+position = Vector2(572, 299)
+rotation = 0.354402
+scale = Vector2(0.860354, 1)
+texture = ExtResource("12_0cb10")
+
+[node name="LineaB4" type="Sprite2D" parent="Mapa/lineaB/conexiones"]
+position = Vector2(753.609, 367.37)
+rotation = 0.366225
+scale = Vector2(1.1853, 1)
+texture = ExtResource("12_0cb10")
+
+[node name="LineaB5" type="Sprite2D" parent="Mapa/lineaB/conexiones"]
+position = Vector2(931.481, 434.514)
+rotation = 0.361262
+scale = Vector2(0.838327, 1)
+texture = ExtResource("12_0cb10")
+
+[node name="lineaC" type="Node2D" parent="Mapa"]
+
+[node name="conexiones" type="Node2D" parent="Mapa/lineaC"]
+
+[node name="LineaC2" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(806.347, 225.607)
+rotation = -1.18466
+scale = Vector2(0.883598, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(970.54, 35.7674)
+rotation = -0.702687
+scale = Vector2(0.890281, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC3" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(868.119, 120.532)
+rotation = -0.686951
+scale = Vector2(0.389858, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC4" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(719.49, 395.348)
+rotation = -0.204113
+scale = Vector2(0.241968, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC5" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(757.052, 347.368)
+rotation = -1.19002
+scale = Vector2(0.509598, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC6" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(607.675, 463.819)
+rotation = -1.24537
+scale = Vector2(0.67357, 0.996878)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC7" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(680.513, 391.318)
+rotation = 0.364897
+scale = Vector2(0.249479, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC8" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(645.062, 392.263)
+rotation = -0.516205
+scale = Vector2(0.210152, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC9" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(561, 582)
+rotation = -1.15775
+scale = Vector2(0.660692, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC10" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(492, 747)
+rotation = -1.18607
+scale = Vector2(1.12824, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC11" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(420, 923)
+rotation = -1.18603
+scale = Vector2(0.812649, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC12" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(281.006, 1118.82)
+rotation = -1.17839
+scale = Vector2(0.475881, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC13" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(378.679, 1024.89)
+rotation = -1.18249
+scale = Vector2(0.257384, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="LineaC14" type="Sprite2D" parent="Mapa/lineaC/conexiones"]
+position = Vector2(334.247, 1061.35)
+rotation = -0.401434
+scale = Vector2(0.41495, 1)
+texture = ExtResource("13_uiy4y")
+
+[node name="estaciones" type="Node2D" parent="Mapa/lineaC"]
+
+[node name="estación18" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(701, 399)
+
+[node name="estación32" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(773, 307)
+
+[node name="estación33" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(900, 94)
+
+[node name="estación34" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(1035, -19)
+
+[node name="estación12" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(587, 525)
+
+[node name="estación30" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(263, 1162)
+
+[node name="estación26" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(387, 1001)
+
+[node name="estación25" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(449, 851)
+
+[node name="estación31" parent="Mapa/lineaC/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(534, 643)
+
+[node name="lineaD" type="Node2D" parent="Mapa"]
+
+[node name="conexiones" type="Node2D" parent="Mapa/lineaD"]
+
+[node name="LineaD" type="Sprite2D" parent="Mapa/lineaD/conexiones"]
+position = Vector2(319.036, 4.98956)
+rotation = 0.395214
+scale = Vector2(0.755336, 1)
+texture = ExtResource("14_r8cj4")
+
+[node name="LineaD2" type="Sprite2D" parent="Mapa/lineaD/conexiones"]
+position = Vector2(483.202, 70.3808)
+rotation = 0.356083
+scale = Vector2(0.771607, 1)
+texture = ExtResource("14_r8cj4")
+
+[node name="LineaD3" type="Sprite2D" parent="Mapa/lineaD/conexiones"]
+position = Vector2(571.605, 155.38)
+rotation = 1.33182
+scale = Vector2(0.582963, 1)
+texture = ExtResource("14_r8cj4")
+
+[node name="LineaD4" type="Sprite2D" parent="Mapa/lineaD/conexiones"]
+position = Vector2(642, 343)
+rotation = 0.746183
+scale = Vector2(0.37548, 1)
+texture = ExtResource("14_r8cj4")
+
+[node name="LineaD5" type="Sprite2D" parent="Mapa/lineaD/conexiones"]
+position = Vector2(601.617, 268.55)
+rotation = 1.31284
+scale = Vector2(0.497289, 1)
+texture = ExtResource("14_r8cj4")
+
+[node name="LineaD6" type="Sprite2D" parent="Mapa/lineaD/conexiones"]
+position = Vector2(734, 469)
+rotation = 1.00377
+scale = Vector2(1.09383, 1)
+texture = ExtResource("14_r8cj4")
+
+[node name="estaciones" type="Node2D" parent="Mapa/lineaD"]
+
+[node name="estación22" parent="Mapa/lineaD/estaciones" instance=ExtResource("10_7uol4")]
+z_index = 1
+position = Vector2(239, -29)
+
+[node name="estación21" parent="Mapa/lineaD/estaciones" instance=ExtResource("10_7uol4")]
+z_index = 1
+position = Vector2(402, 39)
+
+[node name="estación20" parent="Mapa/lineaD/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(588, 220)
+
+[node name="estación19" parent="Mapa/lineaD/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(671, 370)
+
+[node name="estación16" parent="Mapa/lineaD/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(796, 563)
+
+[node name="lineaE" type="Node2D" parent="Mapa"]
+
+[node name="conexiones" type="Node2D" parent="Mapa/lineaE"]
+
+[node name="LineaE" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(-36.9386, 831.946)
+rotation = 0.354947
+scale = Vector2(0.885066, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE2" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(140, 898)
+rotation = 0.362667
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE3" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(254, 942)
+rotation = 0.394234
+scale = Vector2(0.24375, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE4" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(319.858, 943.963)
+rotation = -0.150047
+scale = Vector2(0.46934, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE5" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(386.966, 886.904)
+rotation = -1.11978
+scale = Vector2(0.593919, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE6" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(427.527, 797.837)
+rotation = -1.17114
+scale = Vector2(0.456294, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE7" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(524.36, 730.648)
+rotation = -0.338533
+scale = Vector2(0.8709, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="LineaE8" type="Sprite2D" parent="Mapa/lineaE/conexiones"]
+position = Vector2(688, 669)
+rotation = -0.380683
+scale = Vector2(0.898376, 1)
+texture = ExtResource("15_7scxj")
+
+[node name="estaciones" type="Node2D" parent="Mapa/lineaE"]
+
+[node name="estación17" parent="Mapa/lineaE/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(774, 633)
+
+[node name="estación23" parent="Mapa/lineaE/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(606, 702)
+
+[node name="estación24" parent="Mapa/lineaE/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(412, 835)
+
+[node name="estación27" parent="Mapa/lineaE/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(233, 932)
+
+[node name="estación28" parent="Mapa/lineaE/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(48, 862)
+
+[node name="estación29" parent="Mapa/lineaE/estaciones" instance=ExtResource("10_7uol4")]
+position = Vector2(-119, 802)
+
+[node name="transbordos" type="Node2D" parent="Mapa"]

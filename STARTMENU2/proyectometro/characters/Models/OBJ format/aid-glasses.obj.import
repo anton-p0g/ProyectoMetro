@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dygajgbjk5j34"
+path="res://.godot/imported/aid-glasses.obj-d8356ba4f6c4a4df2b9b9807e9a9ae8b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/aid-glasses.obj-d8356ba4f6c4a4df2b9b9807e9a9ae8b.mesh"]
+
+source_file="res://characters/Models/OBJ format/aid-glasses.obj"
+dest_files=["res://.godot/imported/aid-glasses.obj-d8356ba4f6c4a4df2b9b9807e9a9ae8b.mesh", "res://.godot/imported/aid-glasses.obj-d8356ba4f6c4a4df2b9b9807e9a9ae8b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
