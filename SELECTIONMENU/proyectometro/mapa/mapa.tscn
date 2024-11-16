@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bv6oh35yftx5s"]
 
 [ext_resource type="Texture2D" uid="uid://b1m5hgmjg7qn4" path="res://assets/map.png" id="1_85bvt"]
-[ext_resource type="PackedScene" path="res://mapa/estación.tscn" id="2_ajnup"]
+[ext_resource type="PackedScene" uid="uid://dmh5cvmnge2it" path="res://mapa/estación.tscn" id="2_ajnup"]
 [ext_resource type="Texture2D" uid="uid://dimqkv6emw57i" path="res://assets/routes/lineaA.jpeg" id="3_g5psy"]
 [ext_resource type="Texture2D" uid="uid://drgafcl8emknt" path="res://assets/routes/lineaD.jpeg" id="3_h7gsh"]
 [ext_resource type="Texture2D" uid="uid://cq8nusa8ravxi" path="res://assets/routes/lineaB.png" id="4_j3why"]
