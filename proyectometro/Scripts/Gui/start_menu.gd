@@ -19,7 +19,7 @@ func show_menu():
 
 
 func _on_start_pressed() -> void:
-	Transition.transition_to("res://Gui/JoinMenuScreen.tscn")
+	Transition.transition_to("res://Scenes/SeleccionEstaciones.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
