@@ -671,10 +671,10 @@ rotation = -1.18603
 scale = Vector2(0.812649, 1)
 texture = ExtResource("13_uiy4y")
 
-[node name="1123" type="Node2D" parent="Mapa/conexiones"]
+[node name="1122" type="Node2D" parent="Mapa/conexiones"]
 z_index = 5
 
-[node name="1123" type="Sprite2D" parent="Mapa/conexiones/1123"]
+[node name="1122" type="Sprite2D" parent="Mapa/conexiones/1122"]
 position = Vector2(492, 747)
 rotation = -1.18607
 scale = Vector2(1.12824, 1)

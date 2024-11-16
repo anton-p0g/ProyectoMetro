@@ -30,7 +30,7 @@ func load_scene() -> void:
 	$"Mapa/conexiones/1980",
 	$"Mapa/conexiones/992",
 	$"Mapa/conexiones/1057",
-	$"Mapa/conexiones/1123",
+	$"Mapa/conexiones/1122",
 	$"Mapa/conexiones/1190",
 	$"Mapa/conexiones/1260",
 	$"Mapa/conexiones/1332",
