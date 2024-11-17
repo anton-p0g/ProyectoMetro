@@ -11,17 +11,18 @@ config_version=5
 [application]
 
 config/name="ProyectoMetro"
-run/main_scene="res://Gui/StartMenuScreen.tscn"
+run/main_scene="res://Scenes/Gui/StartMenuScreen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Transition="*res://Gui/Transition/Transition.tscn"
+Transition="*res://Scenes/Gui/Transition/Transition.tscn"
+GlobalData="*res://Scripts/GlobalData.gd"
 
 [display]
 
-mouse_cursor/custom_image="res://Sprites/Mouse/pointer_c_shaded.png"
+mouse_cursor/custom_image="res://Assets/Sprites/Mouse/pointer_c_shaded.png"
 
 [dotnet]
 
